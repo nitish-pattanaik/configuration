@@ -1,0 +1,34 @@
+#Set Font
+#fontname "sans-serif:pixelsize=14:bold"
+fontname "JetBrains Mono:style=Bold:pixelsize=15"
+borderwidth 3
+#color activeborder "#6CA4F8"
+
+#set menu font color
+#color font "#000000"
+#set font color for selected menu item
+color selfont "#db61a2" #brightpurple
+#set the color of the border while grouping a window
+color groupborder "#2b7489" #brightcyan
+#set the color of the inactive border
+color inactiveborder "#4d4d4d" #brightblack
+#set menu background color
+#set menubg "#ffffff"
+#set menu foreground color
+#set menufg "#000000"
+
+#Application Menu
+command XTerm /usr/X11R6/bin/xterm
+command Calculator /usr/X11R6/bin/xcalc
+command SetWallpaper /usr/local/bin/openbsd-wallpaper
+command Clock	/usr/X11R6/bin/xclock
+
+#define "gap" in pixels at the enge of the screen
+#gap 1 0 0 0 
+
+#Ignore programs by that name by not drawing borders  around them. 
+#ignore xclock
+#ignore xterm
+#ignore firefox
+
+

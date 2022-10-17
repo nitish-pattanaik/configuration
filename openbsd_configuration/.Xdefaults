@@ -1,0 +1,93 @@
+! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
+XTerm*loginShell:true
+
+!====fonts
+Xft.autohint:0
+Xft.lcdfilter:lcddefault
+Xft.hintstyle:hintslight
+Xft.hinting:1
+Xft.antialias:1
+Xft.rgba:rgb
+
+
+!*font:
+!*font:JetBrainsMonoBol:size=13
+
+!XTerm.vt100.faceName:JetBrainsMonoMed:size=13
+!XTerm.vt100.faceName: Spleen 12x24:style=Medium:size=15
+XTerm.vt100.faceName: JetBrains Mono:style=Medium:size=12
+!XTerm.vt100.font: 8x16
+!XTerm*borderWidth:0
+XTerm*internalBorder:2
+XTerm*termName:xterm-256color
+XTerm.vt100.saveLines:10000
+XTerm.vt100.scrollBar:false
+XTerm.vt100.geometry:90x35
+XTerm.vt100.metaSendsEscape:true
+XTerm.vt100.backarrowKey:false
+!XTerm.vt100.translations: #override \n\
+!	Ctrl <Key>M: maximize() \n\
+!	Ctrl <Key>R: restore()
+XTerm.ttyModes: erase ^?
+XTerm*allowBoldFonts:false
+!XTerm*scrollKey:true
+!XTerm*fullscreen:never
+XTerm*on2Clicks:word
+XTerm*on3Clicks:line
+!XTerm*scrollBar:false
+XTerm*selectToClipboard:true
+xterm.vt100.translations: #override \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+XTerm*background:#000000
+XTerm*foreground:#ffffff
+!XTerm*color0:#000000
+!XTerm*color1:#ff6c60
+!XTerm*color2:#a8ff60
+!XTerm*color3:#ffffb6
+!XTerm*color4:#6a96ca
+!XTerm*color5:#ff73fd
+!XTerm*color6:#c6c5fe
+!XTerm*color7:#eeeeee
+!XTerm*color8:#7c7c7c
+!XTerm*color9:#ffb6b0
+!XTerm*color10:#ceffab
+!XTerm*color11:#ffffcb
+!XTerm*color12:#b6dcfe
+!XTerm*color13:#ff9cfe
+!XTerm*color14:#dfdffe
+!XTerm*color15:#ffffff
+
+
+
+
+XTerm*color0:#000000
+XTerm*color1:#f78166
+XTerm*color2:#56d364
+XTerm*color3:#e3b341
+XTerm*color4:#6ca4f8
+XTerm*color5:#db61a2
+!XTerm*color6:#a3bedd
+XTerm*color6:#61d6d6
+XTerm*color7:#ffffff
+XTerm*color8:#4d4d4d
+XTerm*color9:#f78166
+XTerm*color10:#56d364
+XTerm*color11:#e3b341
+XTerm*color12:#6ca4f8
+XTerm*color13:#db61a2
+!XTerm*color14:#a3bedd
+XTerm*color14:#61d6d6
+XTerm*color15:#ffffff
+XTerm*colorBD:#c9d1d9
+XTerm.vt100.colorBDMode: true
+XTerm.vt100.colorUL: green
+XTerm.vt100.colorULMode: false
+XTerm*cursorBlink: false
+XTerm*fastScroll: true
+XTerm*highlightSelection: true
+XTerm*jumpScroll: true
+XTerm*multiScroll: true
+XTerm*rightScrollBar: true
+XTerm*scrollBar: false
+
