@@ -1,62 +1,43 @@
 filetype indent on
 
-set scrolloff=8
-set nobackup 
-set noswapfile 
+"set scrolloff=0
+set nobackup
+set noswapfile
+set undodir=~/.local/state/nvim/undo/   "default enabled...same
 
-set ignorecase 
-set smartcase 
-set smartindent 
+set ignorecase
+set smartcase
+set smartindent
 
 set confirm
 set noerrorbells
-"set relativenumber
-set number 
+set number
+"set rnu
 set laststatus=0
-set fileencoding=UTF-8
-set encoding=UTF-8
 
-set wrap 
+set wrap
 set expandtab
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
-set clipboard+=unnamedplus
 
-"encoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileformat=unix
 
-"colorcolumn = "80"
-"signcolumn = "yes"
+set title
+set mouse=a             "default set only  to n,v,i... I set it to all-a
 
-"vim.opt.listchars = {
-"    tab = "| ",
-"    eol = '¬',
-"    trail = '·'
-"}
+""remap keys
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
-
-set title 
-set mouse=a
-
-"remap keys
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-"Emulate GeorgeHotz ColorScheme But with default.vim
-colorscheme default
-highlight Comment ctermfg=green
-highlight Constant ctermfg=red
-highlight Identifier ctermfg=darkblue
-highlight PreProc ctermfg=darkmagenta
-highlight Special ctermfg=darkcyan
-highlight Type ctermfg=cyan
-highlight Statement ctermfg=darkyellow
-highlight LineNr ctermfg=brown
-highlight RedrawDebugClear ctermbg=yellow ctermfg=black
-highlight RedrawDebugComposed ctermbg=darkgreen ctermfg=white
-
-"highlight Statement ctermfg=darkmagenta
-"highlight LineNr ctermfg=darkyellow
-"highlight PreProc ctermfg=brown
+colorscheme slate
+set termguicolors
+hi Comment guifg=lightgreen
+hi Function guifg=darkmagenta
+hi Constant guifg=red
+hi MatchParen guibg=darkcyan guifg=white
+"hi Cursor guibg=red guifg=white
