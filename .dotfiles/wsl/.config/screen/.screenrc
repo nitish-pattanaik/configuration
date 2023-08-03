@@ -1,0 +1,45 @@
+# 256 COLOR SUPPORT
+# By default, screen uses an 8-color terminal emulator. Use the
+# following line to enable more colors
+term screen.xterm-256color
+# Set terminfo and termcap for nice 256 color terminal
+# Allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# Tell screen how to set colors. AB = background, AF=foreground
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Erase background with current bg color
+defbce "on"
+
+#Turn off that annoying startup message
+startup_message off
+
+# Turn the even more annoying whole-screen-flash-on-tab-complete "FEATURE"
+vbell off
+
+# I use control+a for beginning of line, this remaps it to the tick/tilde key
+escape ``
+
+# Bind tick + e to show the tick character since tick+tick is too convenience to toggle windows
+escape `e
+
+# Window list at the bottom. hostname, centererd tabs and redmarked active windows:
+truecolor on
+hardstatus off
+backtick 0 5 5 "/bin/date" '+%Y-%m-%d'
+backtick 1 5 5 "/bin/date" '+%H:%M'
+hardstatus alwayslastline '%{#24a148}[ %H ][%{#ffffff}%= %{7}%?%-Lw%?%{1;0}%{1}(%{15}%n%f%t%?(%u)%?%{1;0}%{1})%{7}%?%+Lw%?%? %=%{#24a148}][ %{#00a5ff}%{6}%0` %{#ffffff}%{7}%1`%{#24a148} ]'
+defscrollback 50000
+altscreen on
+
+#hardstatus alwayslastline '%{
+#little bit modified to geohot
+#hardstatus string '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%? %= %{g}][%{c} %m/%d %{W}%c %{g}]'
+# Enable mouse scrolling
+termcapinfo xterm* ti@:te@
+
+# Set the log file location and name
+#logfile $HOME/screenlogs/.screenlog_%Y%m%d_%H%M%S
+
