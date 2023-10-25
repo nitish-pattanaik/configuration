@@ -1,131 +1,182 @@
 env:
   TERM: xterm-256color
+
 shell:
   program: ubuntu
+
+# Windows Properties
 window:
   dimensions:
-       columns: 125
-       lines: 35
+       columns: 140
+       lines: 40
   paddings:
-       x: 6
-       y: 6
-  title: Alacritty
-  
+       x: 0
+       y: 0
   startup_mode: Windowed
+  title: Alacritty
+  dynamic_title: true
+  decorations: full
+
+# Scrolling  
 scrolling:
-  history: 10000
+  history: 50000
   multiplier: 3
   faux_multiplier: 3
-  auto_scroll: false
+  auto_scroll: true
+
+# Save to clipboard
+selection:
+  save_to_clipboard: true
+
+# Font settings
+#font:
+#  normal:
+#    family: "Cascadia Mono"
+#    style: Regular
+#  bold:
+#    family: "Cascadia Mono"
+#    style: Bold
+#  italic:
+#    family: "Cascadia Mono"
+#    style: Light Italic
+#  bold_italic:
+#    family: "Cascadia Mono"
+#    style: Bold Italic
+#  size: 11
+#  offset:
+#    x: 0
+#    y: 0
+#  glyph_offset:
+#    x: 0
+#    y: 0
+      
 
 font:
   normal:
-    family: "SF Mono"
-    style: Medium
+    family: "Iosevka Fixed"
+    style: Regular
   bold:
-    family: "SF Mono"
-    style: Bold
+    family: "Iosevka Fixed"
+    style: Medium 
   italic:
-    family: "SF Mono"
-    style: "Light Italic"
-  size: 11.0
+    family: "Iosevka Fixed"
+    style: Light Italic
+  bold_italic:
+    family: "Iosevka Fixed"
+    style: Medium Italic
+  size: 16
+  hinting: Full
+  antialias: Subpixel
   offset:
     x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
-  use_thin_strokes: true
-custom_curosr_colors: true
-draw_bold_text_with_bright_colors: true
-  #github dark color scheme
+
+#  use_thin_strokes: true
+  AppleFontSmoothing: default
+
+# Cursor Style and Shape
+cursor:
+  style:
+    shape: Block
+    blinking: On
+  vi_mode_style: Block
+  blink_interval: 750
+  blink_timeout: 5
+  unfocused_hollow: true
+  thinkness: 0.15
+# ColorDomain:
+custom_cursor_colors: true
+
+draw_bold_text_with_bright_colors: false
 
 window_opacity: 1.0
-# Colors (Monokai Remastered)
+
+#ColorDomain: Color Schemes[Tango Dark: favorite]
 #colors:
 #  bright:
-#    black: '#625e4c'
-#    blue: '#9d65ff'
-#    cyan: '#58d1eb'
-#    green: '#98e024'
-#    magenta: '#f4005f'
-#    red: '#f4005f'
-#    white: '#f6f6ef'
-#    yellow: '#e0d561'
-#  cursor:
-#    cursor: '#fc971f'
-#    text: '#000000'
-#  normal:
-#    black: '#1a1a1a'
-#    blue: '#9d65ff'
-#    cyan: '#58d1eb'
-#    green: '#98e024'
-#    magenta: '#f4005f'
-#    red: '#f4005f'
-#    white: '#c4c5b5'
-#    yellow: '#fd971f'
-#  primary:
-#    background: '#0c0c0c'
-#    foreground: '#d9d9d9'
-#  selection:
-#    background: '#343434'
-#    text: '#ffffff'
-# Colors (Tomorrow Night Bright)
-#colors:
-#  bright:
-#    black: '#000000'
-#    blue: '#7aa6da'
-#    cyan: '#70c0b1'
-#    green: '#b9ca4a'
-#    magenta: '#c397d8'
-#    red: '#d54e53'
-#    white: '#ffffff'
-#    yellow: '#e7c547'
+#    black: '#555753'
+#    blue: '#729FCF'
+#    cyan: '#34E2E2'
+#    green: '#8AE234'
+#    magenta: '#AD7FA8'
+#    red: '#EF2929'
+#    white: '#EEEEEC'
+#    yellow: '#FCE94F'
 #  cursor:
 #    cursor: '#eaeaea'
 #    text: '#000000'
 #  normal:
 #    black: '#000000'
-#    blue: '#7aa6da'
-#    cyan: '#70c0b1'
-#    green: '#b9ca4a'
-#    magenta: '#c397d8'
-#    red: '#d54e53'
-#    white: '#ffffff'
-#    yellow: '#e7c547'
+#    blue: '#3465A4'
+#    cyan: '#06989A'
+#    green: '#4E9A06'
+#    magenta: '#75507B'
+#    red: '#CC0000'
+#    white: '#FFFFFD'
+#    yellow: '#C4A000'
 #  primary:
 #    background: '#000000'
-#    foreground: '#eaeaea'
+#    foreground: '#FFFFFD'
 #  selection:
-#    background: '#424242'
+#    background: '#3465A4'
 #    text: '#eaeaea'
+# selection background: #8F8F8F  (previously)
 
-# Colors (Tango Dark Windows Terminal theme)
+
 colors:
   bright:
-    black: '#555753'
-    blue: '#729FCF'
-    cyan: '#34E2E2'
-    green: '#8AE234'
-    magenta: '#AD7FA8'
-    red: '#EF2929'
-    white: '#EEEEEC'
-    yellow: '#FCE94F'
+    black: '#808080'
+    blue: '#0000FF'
+    cyan: '#00FFFF'
+    green: '#00FF00'
+    magenta: '#FF00FF'
+    red: '#FF0000'
+    white: '#FFFFFF'
+    yellow: '#FFFF00'
   cursor:
-    cursor: '#eaeaea'
+    cursor: '#FFFFFF'
     text: '#000000'
   normal:
     black: '#000000'
-    blue: '#3465A4'
-    cyan: '#06989A'
-    green: '#4E9A06'
-    magenta: '#75507B'
-    red: '#CC0000'
-    white: '#FFFFFD'
-    yellow: '#C4A000'
+    blue: '#000080'
+    cyan: '#008080'
+    green: '#008000'
+    magenta: '#800080'
+    red: '#800000'
+    white: '#C0C0C0'
+    yellow: '#808000'
   primary:
-    background: '#000000'
-    foreground: '#FFFFFD'
+    background: '#161616'
+    foreground: '#F4F4F4'
   selection:
+    background: '#3465A4'
+    text: '#000000'
+
+#previous background and foreground respectively: #000000, #FFFFFF
+
+#ColorDomain: vi mode cursor colors
+vi_mode_cursor:
+  text: CellBackground
+  cursor: CellForeground
+
+# Seach colors
+search:
+  matches:
+    foreground: '#000000'
     background: '#FFFFFF'
-    text: '#eaeaea'
+  focused_match:
+    foreground: '#FFFFFF'
+    background: '#000000'
+
+# KeyBindings
+#key_bindings:
+  #- { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  #- { key: N,        mods: Control,       action: SpawnNewInstance }
+mouse_bindings:
+  - { mouse: Right,                 action: PasteSelection }
+  - { mouse: Right,  mods: Control, action: ExpandSelection }
+  - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
